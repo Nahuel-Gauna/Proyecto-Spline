@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Mi Proyecto</h1>
+    </header>
+    <section class="animacion-3d">
+        <iframe data-src="https://my.spline.design/robotfollowcursorforlandingpage-05bd6349fc684a5135bf9f2c6d42764a/" frameborder="0" width="100%" height="70vh" class="lazy-iframe"></iframe>
+    </section>
+    <main>
+        <section class="imagenes-titulo">
+            <h2>Imágenes del Proyecto</h2>
+        </section>
+        <section class="media">
+            <div class="imagen-container" onclick="toggleFullScreen(this)">
+                <img src="images/imagen1.png" alt="Descripción de la imagen 1">
+            </div>
+            <div class="imagen-container" onclick="toggleFullScreen(this)">
+                <img src="images/imagen2.png" alt="Descripción de la imagen 2">
+            </div>
+            <div class="imagen-container" onclick="toggleFullScreen(this)">
+                <img src="images/imagen3.png" alt="Descripción de la imagen 2">
+            </div>
+            <div class="imagen-container" onclick="toggleFullScreen(this)">
+                <img src="images/imagen4.png" alt="Descripción de la imagen 2">
+            </div>
+        </section>
+        <section class="video-titulo">
+            <h2>Video</h2>
+        </section>
+        <section class="video">
+            <div class="video-container">
+                <iframe data-src="https://www.youtube.com/embed/videoseries?list=PLXC_gcsKLD6l3eNixPfgjngvGXnOMroK-" frameborder="0" width="560" height="315" class="lazy-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Proyecto</p>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/tu_perfil_de_instagram" target="_blank"><img src="instagram_logo.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/tu_perfil_de_linkedin" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFullScreen(element) {
+            if (!document.fullscreenElement) {
+                element.requestFullscreen().catch(err => {
+                    alert(`Error al intentar activar el modo pantalla completa: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Script para carga diferida de iframes
+        document.addEventListener("DOMContentLoaded", function() {
+            const lazyIframes = document.querySelectorAll('iframe.lazy-iframe');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        iframe.src = iframe.getAttribute('data-src');
+                        observer.unobserve(iframe);
+                    }
+                });
+            });
+
+            lazyIframes.forEach(iframe => {
+                observer.observe(iframe);
+            });
+        });
+    </script>
+</body>
+</html>
