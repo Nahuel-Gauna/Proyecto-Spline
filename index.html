@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
+    <!-- Cambio en el enlace de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0zfrnyGpDzGr53V0fAvJ28H6Vq9gSFgwNvrE1l7p5kZv/F2Q9z9qJlnx2wwzga4" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,11 +13,12 @@
         <h1>Bienvenidos a Mi Proyecto</h1>
     </header>
     <section class="animacion-3d">
-        <iframe data-src="https://my.spline.design/robotfollowcursorforlandingpage-05bd6349fc684a5135bf9f2c6d42764a/" frameborder="0" width="100%" height="70vh" class="lazy-iframe"></iframe>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.5.4/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/fKwdgJkPdlLSeYNR/scene.splinecode"></spline-viewer>
     </section>
     <main>
         <section class="imagenes-titulo">
-            <h2>Imágenes</h2>
+            <h2>Imágenes del Proyecto</h2>
         </section>
         <section class="media">
             <div class="imagen-container" onclick="toggleFullScreen(this)">
@@ -25,27 +28,32 @@
                 <img src="images/imagen2.png" alt="Descripción de la imagen 2">
             </div>
             <div class="imagen-container" onclick="toggleFullScreen(this)">
-                <img src="images/imagen3.png" alt="Descripción de la imagen 2">
+                <img src="images/imagen3.png" alt="Descripción de la imagen 3">
             </div>
             <div class="imagen-container" onclick="toggleFullScreen(this)">
-                <img src="images/imagen4.png" alt="Descripción de la imagen 2">
+                <img src="images/imagen4.png" alt="Descripción de la imagen 4">
             </div>
         </section>
         <section class="video-titulo">
             <h2>Video</h2>
         </section>
         <section class="video">
-            <div class="video-container">
-                <iframe data-src="https://www.youtube.com/embed/videoseries?list=PLXC_gcsKLD6l3eNixPfgjngvGXnOMroK-" frameborder="0" width="560" height="315" class="lazy-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <!-- Agregando el iframe de la lista de reproducción de YouTube -->
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLXC_gcsKLD6l3eNixPfgjngvGXnOMroK-" frameborder="0" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Mi Proyecto</p>
         <div class="redes-sociales">
-            <a href="https://www.instagram.com/tu_perfil_de_instagram" target="_blank"><img src="instagram_logo.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/in/tu_perfil_de_linkedin" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn"></a>
+            <!-- Logo de Instagram con enlace -->
+            <a href="https://www.instagram.com/nahuelsgauna/" target="_blank" class="btn btn-primary btn-lg">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <!-- Logo de LinkedIn con enlace -->
+            <a href="https://www.linkedin.com/in/nahuelgauna/" target="_blank" class="btn btn-primary btn-lg">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
         </div>
     </footer>
 
@@ -78,5 +86,6 @@
             });
         });
     </script>
+
 </body>
 </html>
