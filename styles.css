@@ -1,27 +1,34 @@
+/* styles.css */
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: black;
+    color: white;
+    box-sizing: border-box;
 }
 
+/* Estilos del header */
 header {
     background-color: black;
-    color: #730d76;
+    color: white;
     padding: 1em;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em; /* Reducido para mejor responsividad */
     font-weight: bold;
     text-transform: uppercase;
 }
 
+/* Estilos del main */
 main {
     padding: 1em;
+    padding-bottom: 5em; /* Espacio para el footer fijo */
 }
 
 section {
@@ -34,32 +41,22 @@ section {
     text-align: center;
 }
 
-.animacion-3d iframe {
-    height: 70vh;
+.animacion-3d spline-viewer {
+    width: 100%;
+    height: 50vh; /* Ajustado para mejor responsividad */
+    border: none; /* Asegúrate de que no tenga bordes */
 }
 
 .imagenes-titulo,
 .video-titulo {
     text-align: center;
-    color: white;
+    color:  #730d76;
     margin-bottom: 0.5em;
 }
 
-.imagenes-titulo h2 {
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #00aced;
-    margin: 0;
-    padding: 0.5em;
-    border-bottom: 2px solid #00aced;
-    display: inline-block;
-
-}
-
-
+.imagenes-titulo h2,
 .video-titulo h2 {
-    font-size: 2em;
+    font-size: 1.5em; /* Reducido para mejor responsividad */
     font-weight: bold;
     text-transform: uppercase;
     color: #00aced;
@@ -69,14 +66,17 @@ section {
     display: inline-block;
 }
 
+/* Estilos de la sección de media */
 .media {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias líneas */
     margin-top: 1em;
 }
 
 .imagen-container {
-    margin: 0 5px; 
+    margin: 5px; /* Ajustado para más espacio entre imágenes */
+    flex: 1 1 200px; /* Hacer que las imágenes sean más flexibles */
 }
 
 .imagen-container img {
@@ -92,13 +92,13 @@ section {
     transform: scale(1.05); 
 }
 
+/* Estilos de la sección de video */
 .video {
     background-color: black;
     text-align: center;
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 70vh;
+    padding: 10px 0; /* Combinado para simplificar */
+    height: auto; /* Ajustado para mejor responsividad */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +110,8 @@ section {
     padding: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 560px; /* Ancho máximo para video */
 }
 
 .video-container:hover {
@@ -119,10 +121,11 @@ section {
 .video-container iframe {
     display: block;
     margin: 0 auto;
-    max-width: calc(100% - 20px);
-    max-height: calc(100% - 20px);
+    width: 100%; /* Ajustado para mayor flexibilidad */
+    height: 315px; /* Altura fija */
 }
 
+/* Estilos del footer */
 footer {
     background-color: black;
     color: white;
@@ -131,4 +134,17 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+}
+
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .imagenes-titulo h2,
+    .video-titulo h2 {
+        font-size: 1.2em; /* Ajustado para pantallas más pequeñas */
+    }
 }
