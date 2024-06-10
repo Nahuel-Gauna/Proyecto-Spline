@@ -1,6 +1,3 @@
-/* styles.css */
-
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,14 +10,14 @@ body {
 /* Estilos del header */
 header {
     background-color: black;
-    color: #730d76;
+    color: #00aced;
     padding: 1em;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em; /* Reducido para mejor responsividad */
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -28,7 +25,7 @@ header h1 {
 /* Estilos del main */
 main {
     padding: 1em;
-    padding-bottom: 5em; /* Espacio para el footer fijo */
+    padding-bottom: 5em;
 }
 
 section {
@@ -43,8 +40,8 @@ section {
 
 .animacion-3d spline-viewer {
     width: 100%;
-    height: 50vh; /* Ajustado para mejor responsividad */
-    border: none; /* Asegúrate de que no tenga bordes */
+    height: 50vh;
+    border: none;
 }
 
 .imagenes-titulo,
@@ -56,7 +53,7 @@ section {
 
 .imagenes-titulo h2,
 .video-titulo h2 {
-    font-size: 1.5em; /* Reducido para mejor responsividad */
+    font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
     color: #00aced;
@@ -70,13 +67,13 @@ section {
 .media {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias líneas */
+    flex-wrap: wrap;
     margin-top: 1em;
 }
 
 .imagen-container {
-    margin: 5px; /* Ajustado para más espacio entre imágenes */
-    flex: 1 1 200px; /* Hacer que las imágenes sean más flexibles */
+    margin: 5px;
+    flex: 1 1 200px;
 }
 
 .imagen-container img {
@@ -97,8 +94,8 @@ section {
     background-color: black;
     text-align: center;
     position: relative;
-    padding: 10px 0; /* Combinado para simplificar */
-    height: auto; /* Ajustado para mejor responsividad */
+    padding: 10px 0;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +108,7 @@ section {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    max-width: 560px; /* Ancho máximo para video */
+    max-width: 560px;
 }
 
 .video-container:hover {
@@ -121,8 +118,8 @@ section {
 .video-container iframe {
     display: block;
     margin: 0 auto;
-    width: 100%; /* Ajustado para mayor flexibilidad */
-    height: 315px; /* Altura fija */
+    width: 100%;
+    height: 315px;
 }
 
 /* Estilos del footer */
@@ -134,17 +131,17 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 /* Media Queries para mejorar la responsividad */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em; /* Ajustado para pantallas más pequeñas */
+        font-size: 1.5em;
     }
 
     .imagenes-titulo h2,
     .video-titulo h2 {
-        font-size: 1.2em; /* Ajustado para pantallas más pequeñas */
+        font-size: 1.2em;
     }
 }
