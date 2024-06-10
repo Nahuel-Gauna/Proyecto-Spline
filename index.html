@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
-    <!-- Cambio en el enlace de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0zfrnyGpDzGr53V0fAvJ28H6Vq9gSFgwNvrE1l7p5kZv/F2Q9z9qJlnx2wwzga4" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     </section>
     <main>
         <section class="imagenes-titulo">
-            <h2>Imágenes</h2>
+            <h2>Imágenes del Proyecto</h2>
         </section>
         <section class="media">
             <div class="imagen-container" onclick="toggleFullScreen(this)">
@@ -38,25 +38,21 @@
             <h2>Video</h2>
         </section>
         <section class="video">
-            <!-- Agregando el iframe de la lista de reproducción de YouTube -->
             <iframe src="https://www.youtube.com/embed/videoseries?list=PLXC_gcsKLD6l3eNixPfgjngvGXnOMroK-" frameborder="0" width="560" height="315" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Nahuel Gauna</p>
         <div class="redes-sociales">
-            <!-- Logo de Instagram con enlace -->
             <a href="https://www.instagram.com/nahuelsgauna/" target="_blank" class="btn btn-primary btn-lg">
                 <i class="bi bi-instagram"></i> Instagram
             </a>
-            <!-- Logo de LinkedIn con enlace -->
             <a href="https://www.linkedin.com/in/nahuelgauna/" target="_blank" class="btn btn-primary btn-lg">
                 <i class="bi bi-linkedin"></i> LinkedIn
             </a>
         </div>
+        <p>&copy; 2024 Nahuel Gauna</p>
     </footer>
-
     <script>
         function toggleFullScreen(element) {
             if (!document.fullscreenElement) {
