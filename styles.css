@@ -1,9 +1,17 @@
+:root {
+    --primary-color: #00aced;
+    --secondary-color: #730d76;
+    --background-color: black;
+    --text-color: white;
+    --highlight-color: rgba(255, 255, 255, 0.3);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -11,8 +19,8 @@ body {
 }
 
 header {
-    background-color: black;
-    color: #00aced;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     padding: 1em;
     text-align: center;
 }
@@ -35,7 +43,7 @@ section {
 }
 
 .animacion-3d {
-    background-color: black;
+    background-color: var(--background-color);
     padding: 1em;
     text-align: center;
 }
@@ -49,7 +57,7 @@ section {
 .imagenes-titulo,
 .video-titulo {
     text-align: center;
-    color: #730d76;
+    color: var(--secondary-color);
     margin-bottom: 0.5em;
 }
 
@@ -58,10 +66,10 @@ section {
     font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #00aced;
+    color: var(--primary-color);
     margin: 0;
     padding: 0.5em;
-    border-bottom: 2px solid #00aced;
+    border-bottom: 2px solid var(--primary-color);
     display: inline-block;
 }
 
@@ -82,7 +90,7 @@ section {
     height: auto;
     transition: transform 0.3s ease-in-out;
     display: block;
-    border: 2px solid #730d76;
+    border: 2px solid var(--secondary-color);
     border-radius: 10px;
 }
 
@@ -90,8 +98,20 @@ section {
     transform: scale(1.05);
 }
 
+.imagen-container:fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-container:fullscreen img {
+    width: 90vw;
+    height: auto;
+    max-height: 80vh;
+}
+
 .video {
-    background-color: black;
+    background-color: var(--background-color);
     text-align: center;
     position: relative;
     padding: 10px 0;
@@ -103,21 +123,15 @@ section {
 
 .video-container {
     position: relative;
-    background-color: black;
+    background-color: var(--background-color);
     padding: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease-in-out;
     width: 100%;
     max-width: 560px;
 }
 
-.video-container:hover {
-    transform: scale(1.05);
-}
-
 footer {
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-align: center;
     padding: 1em;
     position: fixed;
